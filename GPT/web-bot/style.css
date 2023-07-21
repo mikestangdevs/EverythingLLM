@@ -1,0 +1,252 @@
+:root {
+	--background-root: #060606;
+	--background-root-gradient: linear-gradient(180deg, #0C0C0C 0%, #060606 100%);
+
+	--foreground-default: #F7F8F8;
+	--foreground-dimmer: #dedfe162;
+
+	--accent-primary: #88F2CC;
+	--accent-primary-gradient: linear-gradient(180deg, #88F2CC 0%, rgba(63, 29, 158, 0.32) 100%);
+
+	--accent-secondary: #5ba087;
+}
+
+@font-face {
+	font-family: Switzer;
+	src: url(fonts/Switzer-Regular.ttf);
+}
+
+@font-face {
+	font-family: Switzer Bold;
+	src: url(fonts/Switzer-Bold.ttf);
+}
+
+@font-face {
+	font-family: Switzer Semi Bold;
+	src: url(fonts/Switzer-Semibold.ttf);
+}
+
+@font-face {
+	font-family: Comfortaa;
+	src: url(fonts/Comfortaa-Regular.ttf);
+}
+
+@font-face {
+	font-family: Comfortaa Bold;
+	src: url(fonts/Comfortaa-Bold.ttf);
+}
+
+@font-face {
+	font-family: Comfortaa Light;
+	src: url(fonts/Comfortaa-Light.ttf);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* ChatBot Styling*/
+
+ion-icon {
+	margin-top: 2px;
+	font-size: 22px;
+	color: var(--background-root);
+}
+
+svg{
+	margin: -10px;
+	flex: auto;
+}
+
+.chatbot-toggler {
+	position: fixed;
+	right: 40px;
+	bottom: 35px;
+	height: 50px;
+	width: 50px;
+	color: var(--foreground-default);
+	border: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	outline: none;
+	cursor: pointer;
+	background: var(--accent-primary);
+	border-radius: 50%;
+	transition: all 0.2s ease;
+}
+
+.show-chatbot.chatbot-toggler {
+	transform: rotate(90deg);
+}
+
+.chatbot-toggler span {
+	position: fixed;
+}
+
+.show-chatbot .chatbot-toggler span:first-child,
+.chatbot-toggler span:last-child {
+	opacity: 0;
+}
+
+.show-chatbot .chatbot-toggler span:last-child {
+	opacity: 1;
+}
+
+.chatbot {
+	position: fixed;
+	right: 40px;
+	bottom: 100px;
+	width: 420px;
+	transform: scale(0.5);
+	opacity: 0;
+	pointer-events: none;
+	overflow: hidden;
+	background: var(--foreground-default);
+	border-radius: 15px;
+	transform-origin: bottom right;
+	box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.16),
+		0 32px 64px -48px rgba(0, 0, 0, 0.32);
+	transition: all 0.2s ease-in-out;
+}
+
+.show-chatbot .chatbot {
+	transform: scale(1);
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.chatbot header {
+	background: var(--accent-primary);
+	padding: 16px 0;
+	text-align: left;
+}
+
+.chatbot header h2 {
+	font-family: Switzer Semi Bold;
+	font-size: 1.4rem;
+	text-align: center;
+	color: var(--background-root);
+	padding: 0 20px;
+}
+
+.chatbot header span {
+	position: absolute;
+	right: 20px;
+	top: 50%;
+	position: relative;
+	color: var(--foreground-default);
+	cursor: pointer;
+	display: none;
+	transform: translateY(-50%);
+}
+
+.chatbot .chatbox {
+	height: 510px;
+	overflow-y: auto;
+	padding: 30px 20px 70px;
+}
+
+.chatbox .chat {
+	display: flex;
+}
+
+.chatbox .incoming span {
+	height: 32px;
+	width: 32px;
+	color: var(--foreground-default);
+	align-self: flex-end;
+	text-align: center;
+	line-height: 32px;
+	border-radius: 4px;
+	margin: 0 10px 7px 0;
+}
+
+.chatbox .outgoing {
+	margin: 20px 0;
+	justify-content: flex-end;
+}
+
+.chatbox .chat p {
+	color: var(--foreground-default);
+	max-width: 75%;
+	font-size: 0.85rem;
+	padding: 11px 11px;
+	border-radius: 10px 10px 10px 10px;
+	background: var(--accent-secondary);
+	font-family: Switzer;
+}
+
+.chatbox .chat p.error {
+	color: var(--foreground-default);
+	background: #8f3b4369;
+}
+
+.chatbot .incoming p {
+	color: var(--background-root);
+	background: var(--foreground-dimmer);
+	border-radius: 10px 10px 10px;
+	margin-left: -5px;
+}
+
+.chatbot .chat-input {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	display: flex;
+	gap: 5px;
+	background: var(--foreground-default);
+	padding: 5px 20px;
+}
+
+.chat-input.questions {
+	display: none;
+	font-family: Switzer;
+}
+
+.chat-input textarea {
+	height: 55px;
+	width: 100%;
+	border: none;
+	outline: none;
+	font-size: 0.95rem;
+	background: var(--foreground-default);
+	resize: none;
+	font-family: Switzer;
+	padding: 16px 15px 16px 16px;
+	color: var(--background-root);
+}
+
+.chat-input span {
+	align-self: center;
+	height: 55px;
+	line-height: 55px;
+	color: var(--foreground-default);
+	font-size: 1.35rem;
+	cursor: pointer;
+	visibility: hidden;
+}
+
+.chat-input textarea:valid~span {
+	visibility: visible;
+}
+
+@media(max-width: 490px) {
+	.chatbot {
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+		border-radius: 0;
+	}
+
+	.chatbot .chatbox {
+		height: 90%;
+	}
+
+	.chatbot header span {
+		display: block;
+	}
+}
