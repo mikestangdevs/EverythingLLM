@@ -6,6 +6,11 @@
 
 # How-To Guide:
 
+## Obtain your OpenAI API Key
+
+[Sign up](https://openai.com/) or [access](https://help.openai.com/en/articles/4936850-where-do-i-find-my-secret-api-key) your OpenAI API key
+
+
 ## Clone Repo
 
 Get started by cloning my repo in your terminal (preferably in VS Code) by running the git clone command `git clone https://github.com/mikestangdevs/EverythingLLM.git` then head to GPT/web-bot folder
