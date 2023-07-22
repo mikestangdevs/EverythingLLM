@@ -21,6 +21,7 @@ const API_KEY = "OPENAI_API_KEY";
 ## Deploy
 
 If your in VS Code, click the `Go Live` button on the bottom right of your screen and it will deploy a local web host where you can play with ChatGPT on your own machine.
+
 ![Go Live button](media/golive.png)
 
 
