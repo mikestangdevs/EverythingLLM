@@ -3,6 +3,7 @@
 ![Chatbot Snapshot](media/chatbot.png)
 
 
+
 # How-To Guide:
 
 ## Clone Repo
@@ -22,6 +23,7 @@ const API_KEY = "OPENAI_API_KEY";
 
 If your in VS Code, click the `Go Live` button on the bottom right of your screen and it will deploy a local web host where you can play with ChatGPT on your own machine.
 
+
 ![Go Live button](media/golive.png)
 
 
@@ -29,4 +31,4 @@ If your in VS Code, click the `Go Live` button on the bottom right of your scree
 
 Sign up for a `Vercel` account and deploy it live for your friends & family to try 
 
-Read [Vercel's](https://github.com/vercel/vercel/tree/main) documentation here 
+Read Vercel's documentation [here](https://github.com/vercel/vercel/tree/main)
