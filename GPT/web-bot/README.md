@@ -6,11 +6,14 @@
 
 # Clone Repo
 
-Get started by cloning my repo by running the git clone command `git clone https://github.com/mikestangdevs/EverythingLLM.git` then head to GPT/web-bot
+Get started by cloning my repo by running the git clone command `git clone https://github.com/mikestangdevs/EverythingLLM.git` (preferably in VS Code) then head to GPT/web-bot
 
 # Input your OpenAI API Key
 
-Inside the 'bot.js' file enter your OpenAI API key in ```javascript const API_KEY = "OPENAI_API_KEY";```
+Inside the 'bot.js' file enter your OpenAI API key in 
+```javascript 
+const API_KEY = "OPENAI_API_KEY";
+```
 
 # Deploy
 
