@@ -1,6 +1,6 @@
 # Chat with GPT on local machine or web!
 
-![Chatbot Snapshot](media/chatbot.png)
+![Chatbot GIFY](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTlnaDFmbHVobDg1ZzUxNTA4bXYxdnp5OWYwazc3Z2d2aWs1d20wayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/I4xCIDujenI5vTky7Y/giphy.gif)
 
 
 
@@ -13,7 +13,7 @@
 
 ## Clone Repo
 
-Get started by cloning my repo in your terminal (preferably in VS Code) by running the git clone command `git clone https://github.com/mikestangdevs/EverythingLLM.git` then head to GPT/web-bot folder
+Get started by cloning my repo in your terminal (preferably in VS Code) by running the git clone command `git clone https://github.com/mikestangdevs/EverythingLLM.git` then head to GPT/popup-web-chatbot folder
 
 
 ## Input your OpenAI API Key
