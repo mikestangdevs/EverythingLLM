@@ -3,7 +3,7 @@
 
 <br>
 
-![Chatbot GIFY](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTlnaDFmbHVobDg1ZzUxNTA4bXYxdnp5OWYwazc3Z2d2aWs1d20wayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/I4xCIDujenI5vTky7Y/giphy.gif)
+![Chatbot GIPHY](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTlnaDFmbHVobDg1ZzUxNTA4bXYxdnp5OWYwazc3Z2d2aWs1d20wayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/I4xCIDujenI5vTky7Y/giphy.gif)
 
 <br>
 
@@ -14,9 +14,6 @@
 - [ ] Slide and expand CTA
 - [ ] PDF read & call back through LLM
 
-
-
-<br>
 # How-To Guide:
 
 ## Obtain your OpenAI API Key

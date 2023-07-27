@@ -5,8 +5,9 @@ const themeButton = document.querySelector("#theme-btn");
 const deleteBtn = document.querySelector("#delete-btn");
 
 let userMessage = null;
-const API_KEY = "OPENAI_API_KEY"; // Paste your API key here
+const API_KEY = "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"; // Paste your API key here
 
+//hello gpt3.5 turbo... explain who you are, wha you do, and how you are responding to me through your API right now
 const loadDataFromLocalstorage = () => {
     // Load saved chats and theme from local storage and apply/add on the page
     const themeColor = localStorage.getItem("themeColor");
@@ -15,9 +16,17 @@ const loadDataFromLocalstorage = () => {
     themeButton.innerText = document.body.classList.contains("light-mode") ? "dark_mode" : "light_mode";
 
     const defaultText = `<div class="default-text">
-                            <h1>ChatGPT Clone</h1>
-                            <p>Start a conversation and explore the power of AI.<br> Your chat history will be displayed here.</p>
+                            <h1>ChatGPT Replica</h1>
                         </div>`
+
+//<div class="default-p">
+//<span class="material-symbols-rounded">sunny</span>
+//<p>Examples</p>
+//<span class="material-symbols-rounded">bolt</span> 
+//<p>Capabilties</p>
+//<span class="material-symbols-rounded">warning</span> 
+//<p>Limitations</p>
+//</div>
 
     chatContainer.innerHTML = localStorage.getItem("all-chats") || defaultText;
     chatContainer.scrollTo(0, chatContainer.scrollHeight); // Scroll to bottom of the chat container
@@ -46,9 +55,7 @@ const generateResponse = async (incomingChatDiv) => {
             model: "text-davinci-003",
             prompt: userMessage,
             max_tokens: 2048,
-            temperature: 0.2,
-            n: 1,
-            stop: null
+            temperature: 0.2
         })
     }
 
@@ -98,7 +105,7 @@ const showTypingAnimation = () => {
 
 const handleOutgoingChat = () => {
     userMessage = chatInput.value.trim(); // Get chatInput value and remove extra spaces
-    if(!userMessage) return; // If chatInput is empty return from here
+    if (!userMessage) return; // If chatInput is empty return from here
 
     // Clear the input field and reset its height
     chatInput.value = "";
@@ -121,7 +128,7 @@ const handleOutgoingChat = () => {
 
 deleteBtn.addEventListener("click", () => {
     // Remove the chats from local storage and call loadDataFromLocalstorage function
-    if(confirm("Are you sure you want to delete all the chats?")) {
+    if (confirm("Are you sure you want to delete all the chats?")) {
         localStorage.removeItem("all-chats");
         loadDataFromLocalstorage();
     }
@@ -136,9 +143,9 @@ themeButton.addEventListener("click", () => {
 
 const initialInputHeight = chatInput.scrollHeight;
 
-chatInput.addEventListener("input", () => {   
+chatInput.addEventListener("input", () => {
     // Adjust the height of the input field dynamically based on its content
-    chatInput.style.height =  `${initialInputHeight}px`;
+    chatInput.style.height = `${initialInputHeight}px`;
     chatInput.style.height = `${chatInput.scrollHeight}px`;
 });
 
