@@ -1,9 +1,22 @@
 # Chat with GPT on local machine or web!
+(For web: must deploy on a server e.g., Firebase/Vercel/etc)
+
+<br>
 
 ![Chatbot GIFY](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTlnaDFmbHVobDg1ZzUxNTA4bXYxdnp5OWYwazc3Z2d2aWs1d20wayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/I4xCIDujenI5vTky7Y/giphy.gif)
 
+<br>
+
+<center><h1>Roadmap</h1></center>
+
+- [x] Connect with GPT 3.5 turbo and chat
+- [ ] Silent CTA for chatbot (bouncy button)
+- [ ] Slide and expand CTA
+- [ ] PDF read & call back through LLM
 
 
+
+<br>
 # How-To Guide:
 
 ## Obtain your OpenAI API Key
@@ -37,3 +50,4 @@ If your in VS Code, click the `Go Live` button on the bottom right of your scree
 Sign up for a `Vercel` account and deploy it live for your friends & family to try 
 
 Read Vercel's documentation [here](https://github.com/vercel/vercel/tree/main)
+

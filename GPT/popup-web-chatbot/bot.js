@@ -125,7 +125,9 @@ const generateResponse = (incomingChatLi) => {
         },
         body: JSON.stringify({
             model: "gpt-3.5-turbo",
-            messages: [{ role: "user", content: userMessage }]
+            messages: [{ role: "user", content: userMessage }],
+            max_tokens: 2048,
+            temperature: 0.6,
         })
     }
 
@@ -134,7 +136,7 @@ const generateResponse = (incomingChatLi) => {
         messageElement.textContent = data.choices[0].message.content;
     }).catch((error) => {
         messageElement.classList.add("error");
-        messageElement.textContent = "I'm feeling a little glitchy. Let's try again.";
+        messageElement.textContent = "I'm feeling a little glitchy. Try again again or refresh the page.";
     }).finally(() => chatbox.scrollTo(0, chatbox.scrollHeight));
 }
 
@@ -152,7 +154,7 @@ const handleChat = () => {
         chatbox.appendChild(incomingChatLi);
         chatbox.scrollTo(0, chatbox.scrollHeight);
         generateResponse(incomingChatLi);
-    }, 600);
+    }, 500);
 }
 
 sendChatBtn.addEventListener("click", handleChat);
@@ -163,6 +165,6 @@ chatbotCloseBtn.addEventListener("click", () => document.body.classList.remove("
 chatInput.addEventListener("keydown", (event) => {
   if (event.key === "Enter") {
     event.preventDefault(); // Prevents the default behavior of textarea (new line)
-    handleChat();
+    handleChat(); // sends chat by pressing enter key
   }
 });
