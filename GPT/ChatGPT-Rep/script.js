@@ -5,7 +5,7 @@ const themeButton = document.querySelector("#theme-btn");
 const deleteBtn = document.querySelector("#delete-btn");
 
 let userMessage = null;
-const API_KEY = "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"; // Paste your API key here
+const API_KEY = "OPENAI_API_KEY"; // Paste your API key here
 
 //hello gpt3.5 turbo... explain who you are, wha you do, and how you are responding to me through your API right now
 const loadDataFromLocalstorage = () => {
